@@ -21,6 +21,11 @@ module.exports = {
             ativo: {
                 type: Sequelize.BOOLEAN
             },
+            professor_id: {
+                allowNull:false,
+                type: Sequelize.INTEGER,
+                references: { model: "professores", key: "id" }
+            },
             createdAt: {
                 allowNull: false,
                 type: Sequelize.DATE
