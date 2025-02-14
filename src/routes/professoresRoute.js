@@ -9,5 +9,6 @@ router.get("/professores/:id", (req, res) => professorController.getById(req, re
 router.post("/professores", (req, res) => professorController.create(req, res));
 router.put("/professores/:id", (req, res) => professorController.update(req, res));
 router.delete("/professores/:id", (req, res) => professorController.delete(req, res));
+router.get("/professores/:id/alunos", (req, res) => professorController.getAlunosByProfessor(req, res));
 
 module.exports = router;
